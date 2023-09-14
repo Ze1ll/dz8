@@ -1,6 +1,6 @@
 ﻿class Program
 {
-	public static int[,] Mass(int x,int y)
+	public static int[,] FillMass(int x,int y)
 	{
 		int[,] array = new int[x,y];
 		Random random = new Random();
@@ -41,11 +41,11 @@
 		}
 		Console.WriteLine("\n");
 	}
-	public static void Zadanie_58 ()
+	public static void Zadanie58 ()
 	{
 		Console.WriteLine("Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.");
-				int[,] array1 = Mass(2,2);
-				int[,] array2 = Mass(2,2);
+				int[,] array1 = FillMass(2,2);
+				int[,] array2 = FillMass(2,2);
 				Console.WriteLine("Матрица 1");
 				print(array1);
 				Console.WriteLine("Матрица 2");
@@ -94,12 +94,12 @@
 		return position;
 	}
 
-	public static void Zadanie_59()
+	public static void Zadanie59()
 	{
 		Console.WriteLine("Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.");
 				int num1 = Convert.ToInt32(Console.ReadLine());
 				int num2 = Convert.ToInt32(Console.ReadLine());
-				int[,] array = Mass(num1,num2);
+				int[,] array = FillMass(num1,num2);
 				print(array);
 		
 		int[,] positionSmallElement = new int[1, 2];
@@ -112,7 +112,7 @@
 
 
 	}
-	public static void Zadanie_62()
+	public static void Zadanie62()
 	{
 		Console.WriteLine("Напишите программу, которая заполнит спирально массив 4 на 4.");
 		int[,] array = new int[4, 4];
@@ -144,24 +144,27 @@
 
 	public static void Main ()
 	{
-		
+		Console.WriteLine("Введите номер задачи");
+		Console.WriteLine("Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.");
+		Console.WriteLine("Задача 59: Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива.");
+		Console.WriteLine("Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.");
 		int numzad = Convert.ToInt32(Console.ReadLine());
 		
 		switch (numzad)
 			{
 			case 58:
 				{
-					Zadanie_58();
+					Zadanie58();
 				}
 				break;
 			case 59:
 				{
-					Zadanie_59();
+					Zadanie59();
 				}
 				break;
 			case 62:
 				{
-					Zadanie_62();
+					Zadanie62();
 				}
 				break;
 		}
